@@ -1,0 +1,41 @@
+/* pages/bilibili/index.wxss */
+
+.nav-contain{
+  white-space: nowrap;
+  height: 30px;
+}
+.nav-item{
+  display: inline-block;
+  padding: 8rpx 45rpx;
+  font-size: 30rpx;
+}
+.nav-item.active{
+  border-bottom: 5rpx solid #de688b;
+}
+.scroll-view-contain{
+  height: 500px;
+  height: calc(100vh - 80px);
+}
+.videoCard{
+  height: 120px;
+  padding:10px;
+  border-bottom: 1px solid gainsboro;
+}
+.videoCard .leftPart{
+  display: inline-block; width:40%;height: 100%
+}
+.videoCard .rightPart{
+  display: inline-block; width:60%;height: 100%;
+  padding-left:10px; vertical-align: top
+}
+.rightPart .title{
+  max-height: 40px;
+  overflow: hidden;
+}
+.rightPart .author{
+  margin: 15px 0 8px;
+  color: #757575;
+}
+.rightPart .msgBottom{
+  display: flex;justify-content: space-between;color: #757575;
+}

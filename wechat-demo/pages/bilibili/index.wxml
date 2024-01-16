@@ -1,0 +1,27 @@
+<!--pages/bilibili/index.wxml-->
+<view class="mainCon">
+  <MyTitle></MyTitle>
+  <scroll-view scroll-x class="nav-contain">
+    <view wx:for="{{navList}}" wx:key="index" class="{{index === 1 ? 'active nav-item':'nav-item'}}">{{item}}</view>
+  </scroll-view>
+  <scroll-view scroll-y class="scroll-view-contain">
+    <view wx:for="{{videoList}}" wx:key="{{index}}" class="videoCard" data-id="{{item.id}}" bindtap="cardClick">
+      <view class="leftPart">
+        <image src="{{item.img}}" mode="aspectFill"></image>
+      </view>
+      <view class="rightPart">
+        <view class="title">
+          <text style="width: 100%;word-break: break-all;">{{item.title}}</text>
+        </view>
+        <view class="author">
+          <text>{{item.author}}</text>
+        </view>
+        <view class="msgBottom">
+          <text>{{item.playTimes}}</text>
+          <text>{{item.date}}</text>
+          <view class="icon-share" style="width: 20px;height: 20px"></view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

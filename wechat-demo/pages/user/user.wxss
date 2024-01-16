@@ -1,0 +1,39 @@
+/**index.wxss**/
+
+.userContainer {
+  height: 100%;
+} 
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #333;
+}
+
+.menuList{
+  margin-top: 20px;
+  border-top: 1px solid rgb(207, 205, 205);
+}
+.menuList view{
+  padding: 10px;
+  height: 50px;
+  border-bottom: 1px solid rgb(207, 205, 205);
+}
+.menuList view text{
+  line-height: 30px;
+}
+.menuList view text.more{
+  float: right;
+  color: #757575;
+}
+.bottom{
+  margin-top: 40px;
+}

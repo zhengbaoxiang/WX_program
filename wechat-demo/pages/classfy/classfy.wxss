@@ -1,0 +1,10 @@
+/* pages/classfy/classfy.wxss */
+.imgContain{
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.imgContain image{
+  height: 200px;
+  width: 375rpx;
+}
