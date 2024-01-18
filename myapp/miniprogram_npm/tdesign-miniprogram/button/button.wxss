@@ -87,6 +87,7 @@
 .t-button--default.t-button--disabled::after {
   border-color: var(--td-button-default-disabled-border-color, var(--td-bg-color-component-disabled, var(--td-gray-color-2, #eeeeee)));
 }
+
 .t-button--primary {
   color: var(--td-button-primary-color, var(--td-font-white-1, #ffffff));
   background-color: var(--td-button-primary-bg-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));

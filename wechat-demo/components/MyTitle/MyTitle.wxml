@@ -1,5 +1,0 @@
-<view class="searchCon pd10">
-     <image src="../../images/logo-bilibili-pink.png" mode="aspectFit" class="imgCon"/>
-    <input  type="text" confirm-type="search" bindfocus="bindfocus" />
-    <icon type="search" size="30" color="#fb7299"/>
-  </view>

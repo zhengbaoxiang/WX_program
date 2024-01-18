@@ -1,0 +1,44 @@
+/*  less/sacc定义变量 */
+@brand-color :#f69;
+@primary-color : #f69;
+@info-color : #2db7f5;
+@success-color : #19be6b;
+@processing-color : @primary-color;
+@warning-color : #ff9900;
+@error-color : #ed4014;
+@normal-color : #e6ebf1;
+@link-color : #2D8cF0;
+@link-hover-color : tint(@link-color, 20%);
+@link-active-color : shade(@link-color, 5%);
+@selected-color : fade(@primary-color, 90%);
+
+view{
+    /* css定义变量 */
+    --primary-color: #ff6699;
+    /*  less/sacc定义变量 */
+    @brand-color : #f69;
+  
+    /*  赋值及使用函数 */
+    --td-brand-color: var(--primary-color);
+    --td-brand-color: @primary-color ;
+    --td-brand-color-active: shade(@primary-color, 10%);
+    --td-error-color:@error-color;
+
+    --td-tab-bar-active-color:@primary-color;
+}
+page {
+  height: 100vh;
+  height: calc(100vh - 0px - 56px);
+  padding-top: env(safe-area-inset-top);
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+

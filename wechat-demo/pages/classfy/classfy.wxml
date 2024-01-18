@@ -1,4 +1,0 @@
-<!--pages/classfy/classfy.wxml-->
-<view class="imgContain">
-  <image wx:for="{{imgList}}" wx:key="index" src="{{item.url}}" mode="aspectFill"/>
-</view>

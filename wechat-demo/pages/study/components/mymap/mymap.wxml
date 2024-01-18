@@ -1,6 +1,0 @@
-<!--pages/study/components/mymap.wxml-->
-<view class="mapContainer">
-  <text>{{title}} -- {{msg}}</text>
-  <map style="height: 300px;width: 100%;"></map>
-
-</view>

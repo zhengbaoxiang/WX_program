@@ -1,0 +1,37 @@
+<!--pages/feedback/feedback.wxml-->
+<view>
+  <t-input label="姓名" placeholder="请输入文字" maxlength="{{10}}" align="right"></t-input>
+  <t-input label="手机号" placeholder="输入手机号码" value="{{pageForm.phoneNumber}}" type="number" tips="{{phoneError ? '手机号输入不正确' : ''}}" bindchange="onPhoneInput" align="right">
+    <t-button slot="suffix" class="verify" theme="primary" size="extra-small"> 验证 </t-button>
+  </t-input>
+  <t-cell title="性别">
+    <t-radio-group default-value="0" borderless t-class="box" slot="note">
+      <t-radio block="{{false}}" label="男" value="0" />
+      <t-radio block="{{false}}" label="女" value="1" />
+    </t-radio-group>
+  </t-cell>
+  <t-cell title="性别">
+    <t-checkbox-group t-class="box" borderless bind:change="onChange" defaultValue="{{demoCheckboxMax}}" slot="note">
+      <t-checkbox block="{{false}}" value="checkbox1" label="标题" />
+      <t-checkbox block="{{false}}" value="checkbox2" label="多选" />
+      <t-checkbox block="{{false}}" value="checkbox3" label="四字" />
+    </t-checkbox-group>
+  </t-cell>
+  <t-cell title="选择日期" hover note="{{dateText || ''}}" arrow data-mode="date" bindtap="showPicker" class="test" t-class="panel-item" />
+
+
+
+  <t-cell title="历史记录" note="查看更多" bind:click="onPick" arrow hover />
+
+  <t-cell title="地址" note="请选择" bind:click="onPick" arrow hover required />
+  <t-cell title="是否">
+    <t-switch defaultValue="{{true}}" slot="note" />
+  </t-cell>
+  <t-cell title="是否">
+    <t-input label="标签文字" placeholder="请输入文字"></t-input>
+  </t-cell>
+
+
+  <!-- 年月日 -->
+  <t-date-time-picker title="选择日期" visible="{{dateVisible}}" mode="date" defaultValue="{{date}}" format="YYYY-MM-DD" bindchange="onConfirm" bindpick="onColumnChange" bindcancel="hidePicker" start="{{start}}" end="{{end}}" />
+</view>

@@ -1,0 +1,9 @@
+<t-tab-bar value="{{tabbarValue}}" bindchange="onTabBarChange" theme="tag" split="{{false}}">
+  <t-tab-bar-item wx:for="{{tabbarList}}" 
+  wx:key="index" value="{{item.value}}" icon="{{item.icon}}">
+    {{item.label}}
+  </t-tab-bar-item>
+</t-tab-bar>
+<t-toast id="t-toast" />
+
+<!-- 这个组件不用了，tabBar使用custom时，会自动加载 custom-tab-bar文件夹的组件 -->

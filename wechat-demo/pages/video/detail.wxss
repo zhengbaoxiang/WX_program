@@ -1,7 +1,0 @@
-/* pages/video/detail.wxss */
-.page-body{
-  height: 100%;
-}
-.page-section{
-  height: 225px;
-}

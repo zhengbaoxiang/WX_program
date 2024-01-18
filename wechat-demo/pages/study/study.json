@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "MyMap":"./components/mymap/mymap"
-  },
-  "navigationBarTitleText": "基础语法学习",
-  "navigationBarTextStyle": "black",
-  "navigationBarBackgroundColor": "#f0f0f0"
-}

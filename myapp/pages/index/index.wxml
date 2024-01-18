@@ -21,6 +21,7 @@
       </block>
     </view>
     <view class="usermotto">
+      <t-button theme="primary">按钮</t-button>
       <text class="user-motto">{{motto}}</text>
     </view>
   </view>
