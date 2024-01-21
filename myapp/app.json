@@ -44,11 +44,6 @@
     "backgroundColor": "#ffffff",
     "borderStyle": "black"
   },
-  "permission": {
-    "scope.userInfo": {
-      "desc": "你的小程序需要获取你的昵称、头像、地区及性别信息"
-    }
-  },
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents"
