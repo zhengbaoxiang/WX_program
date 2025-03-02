@@ -1,0 +1,52 @@
+<!--pages/feedback/feedback.wxml-->
+<view style="padding-bottom: 60rpx;">
+  <t-input label="姓名" placeholder="请输入文字" maxlength="{{10}}" align="right" value="{{pageForm.name}}" data-key="name" bind:change="onInputChange"></t-input>
+
+  <t-input label="手机号" placeholder="输入手机号码" type="number" align="right" value="{{pageForm.phoneNumber}}" tips="{{phoneError ? '手机号输入不正确' : ''}}" bind:change="onInputChange" data-key="phoneNumber">
+    <t-button slot="suffix" class="verify" theme="primary" size="extra-small"> 验证 </t-button>
+  </t-input>
+
+  <t-cell title="性别">
+    <t-radio-group slot="note" t-class="box" borderless value="{{pageForm.radio}}" bind:change="radioChange">
+      <t-radio block="{{false}}" label="男" value="0" />
+      <t-radio block="{{false}}" label="女" value="1" />
+    </t-radio-group>
+  </t-cell>
+
+  <t-cell title="爱好">
+    <t-checkbox-group slot="note" t-class="box" borderless value="{{pageForm.checkList}}" bind:change="checkboxChange">
+      <t-checkbox block="{{false}}" value="checkbox1" label="唱跳" icon="rectangle" />
+      <t-checkbox block="{{false}}" value="checkbox2" label="Rap" icon="rectangle" />
+      <t-checkbox block="{{false}}" value="checkbox3" label="篮球" icon="rectangle" />
+    </t-checkbox-group>
+  </t-cell>
+
+  <t-cell title="出生日期" hover arrow note="{{dateText }}" data-key="date" bindtap="showPicker" />
+  <t-cell title="选择地区" arrow hover note="{{areaText}}" data-key="area" bind:click="showPicker" />
+
+
+
+  <t-cell title="是否" required>
+    <t-switch defaultValue="{{true}}" slot="note" />
+  </t-cell>
+  <t-cell title="是否">
+    <t-input label="标签文字" placeholder="请输入文字"></t-input>
+  </t-cell>
+
+
+
+
+</view>
+<view style="position: fixed;bottom: 0;left:0;right: 0;">
+  <t-button theme="primary" size="small" block bindtap="infoConfirm" style="border-radius: 0;">成为大会员</t-button>
+</view>
+
+<!-- 日期弹窗 -->
+<t-date-time-picker title="选择日期" visible="{{dateVisible}}" mode="date" data-key="date" defaultValue="{{pageForm.bornDate}}" format="YYYY-MM-DD" bind:change="onPickerChangeText" bind:cancel="hidePicker" />
+
+<!-- 地区选择器 支持省市区切换，联动 -->
+<t-picker visible="{{areaVisible}}" value="{{areaValue}}" title="选择地区" cancelBtn="取消" confirmBtn="确认" data-key="area" bindchange="onPickerChange" bindpick="onColumnChange" bindcancel="hidePicker">
+  <t-picker-item options="{{provinces}}"></t-picker-item>
+  <t-picker-item options="{{cities}}"></t-picker-item>
+  <t-picker-item options="{{counties}}"></t-picker-item>
+</t-picker>
